@@ -29,8 +29,22 @@ public class MultiCatchExample {
     public static void main(final String[] args) {
         try {
             doSomething();
-        } catch (Exception e) {
-             System.err.println(e.toString());
+        } catch (InputMismatchException e) {
+            System.err.println("InputMismatchException : " + e.getMessage());
+        } catch (NoSuchElementException e) {
+            System.err.println("NoSuchElementException : " + e.getMessage());
+        } catch (IllegalStateException e) {
+            System.err.println("IllegalStateException : " + e.getMessage());
+        } catch (ClassNotFoundException e) {
+            System.err.println("ClassNotFoundException : " + e.getMessage());
+        } catch (IllegalArgumentException e) {
+            System.err.println("IllegalArgumentException : " + e.getMessage());
+        } catch (ArithmeticException e) {
+            System.err.println("ArithmeticException : " + e.getMessage());
+        }
+        // The parent handler must be after the child handler
+        catch (Exception e) {
+            System.err.println(e.toString());
         }
         System.out.println("After doSomething");
     }

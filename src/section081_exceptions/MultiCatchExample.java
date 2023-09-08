@@ -29,18 +29,8 @@ public class MultiCatchExample {
     public static void main(final String[] args) {
         try {
             doSomething();
-        } catch (InputMismatchException e) {
-            System.out.println("InputMismatchException : " + e.getMessage());
-        } catch (NoSuchElementException e) {
-            System.out.println("NoSuchElementException : " + e.getMessage());
-        } catch (IllegalStateException e) {
-            System.out.println("IllegalStateException : " + e.getMessage());
-        } catch (ClassNotFoundException e) {
-            System.out.println("ClassNotFoundException : " + e.getMessage());
-        } catch (IllegalArgumentException e) {
-            System.out.println("IllegalArgumentException : " + e.getMessage());
-        } catch (ArithmeticException e) {
-            System.out.println("ArithmeticException : " + e.getMessage());
+        } catch (Exception e) {
+             System.err.println(e.toString());
         }
         System.out.println("After doSomething");
     }

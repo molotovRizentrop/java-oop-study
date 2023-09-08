@@ -26,8 +26,22 @@ import java.util.Scanner;
  * @email:bassanddub.co@gmail.com
  **/
 public class MultiCatchExample {
-    public static void main(final String[] args) throws ClassNotFoundException {
-        doSomething();
+    public static void main(final String[] args) {
+        try {
+            doSomething();
+        } catch (InputMismatchException e) {
+            System.out.println("InputMismatchException : " + e.getMessage());
+        } catch (NoSuchElementException e) {
+            System.out.println("NoSuchElementException : " + e.getMessage());
+        } catch (IllegalStateException e) {
+            System.out.println("IllegalStateException : " + e.getMessage());
+        } catch (ClassNotFoundException e) {
+            System.out.println("ClassNotFoundException : " + e.getMessage());
+        } catch (IllegalArgumentException e) {
+            System.out.println("IllegalArgumentException : " + e.getMessage());
+        } catch (ArithmeticException e) {
+            System.out.println("ArithmeticException : " + e.getMessage());
+        }
         System.out.println("After doSomething");
     }
 
@@ -35,9 +49,9 @@ public class MultiCatchExample {
      * @throws InputMismatchException
      * @throws NoSuchElementException
      * @throws IllegalStateException
-     * @throws ClassNotFoundException
      * @throws IllegalArgumentException
      * @throws ArithmeticException
+     * @throws ClassNotFoundException
      */
     private static void doSomething() throws ClassNotFoundException {
         final int value = new Scanner(System.in).nextInt();

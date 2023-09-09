@@ -64,6 +64,10 @@ public class ExceptionConversion {
         public CantReadConfigValueException() {
             super();
         }
+
+        public CantReadConfigValueException(final Exception exception) {
+            super(exception);
+        }
     }
 
     public static class FileConfigProvider implements ConfigProvider {
@@ -73,7 +77,7 @@ public class ExceptionConversion {
             try {
                 return Integer.parseInt(Files.readString(Paths.get(System.getProperty("user.home") + "/config-file.txt")));
             } catch (final IOException | NumberFormatException exception) {
-                throw new CantReadConfigValueException();
+                throw new CantReadConfigValueException(exception);
             }
         }
     }
@@ -93,7 +97,7 @@ public class ExceptionConversion {
                     }
                 }
             } catch (final SQLException exception) {
-                throw new CantReadConfigValueException();
+                throw new CantReadConfigValueException(exception);
             }
         }
     }

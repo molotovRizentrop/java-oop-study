@@ -15,7 +15,7 @@
  * under the License.
  */
 
-package section091_exeption_usage;
+package section091_exception_usage;
 
 import java.io.IOException;
 import java.nio.file.Files;

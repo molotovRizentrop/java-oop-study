@@ -15,7 +15,7 @@
  * under the License.
  */
 
-package section091_exeption_usage;
+package section091_exception_usage;
 
 /**
  * @author:kashtan
@@ -30,10 +30,10 @@ public class ConfigureExceptionCharacteristics {
     public static final class Ex0 extends RuntimeException {
 
         /**
-         * section091_exeption_usage.Ex0
-         * at section091_exeption_usage.Test.method2(Test.java:34)
-         * at section091_exeption_usage.Test.method1(Test.java:30)
-         * at section091_exeption_usage.Test.main(Test.java:26)
+         * section091_exception_usage.Ex0
+         * at section091_exception_usage.Test.method2(Test.java:34)
+         * at section091_exception_usage.Test.method1(Test.java:30)
+         * at section091_exception_usage.Test.main(Test.java:26)
          */
         public Ex0() {
         }
@@ -46,10 +46,10 @@ public class ConfigureExceptionCharacteristics {
     public static final class Ex1 extends RuntimeException {
 
         /**
-         * section091_exeption_usage.Ex1: Error message
-         * at section091_exeption_usage.Test.method2(Test.java:34)
-         * at section091_exeption_usage.Test.method1(Test.java:30)
-         * at section091_exeption_usage.Test.main(Test.java:26)
+         * section091_exception_usage.Ex1: Error message
+         * at section091_exception_usage.Test.method2(Test.java:34)
+         * at section091_exception_usage.Test.method1(Test.java:30)
+         * at section091_exception_usage.Test.main(Test.java:26)
          */
         public Ex1(final String message) {
             super(message);
@@ -63,13 +63,13 @@ public class ConfigureExceptionCharacteristics {
     public static final class Ex2 extends RuntimeException {
 
         /**
-         * section091_exeption_usage.Ex2: Error message
-         * at section091_exeption_usage.Test.method2(Test.java:34)
-         * at section091_exeption_usage.Test.method1(Test.java:30)
-         * at section091_exeption_usage.Test.main(Test.java:26)
+         * section091_exception_usage.Ex2: Error message
+         * at section091_exception_usage.Test.method2(Test.java:34)
+         * at section091_exception_usage.Test.method1(Test.java:30)
+         * at section091_exception_usage.Test.main(Test.java:26)
          * Caused by: java.lang.Exception: cause
-         * at section091_exeption_usage.Test.createCause(Test.java:49)
-         * at section091_exeption_usage.Test.main(Test.java:25)
+         * at section091_exception_usage.Test.createCause(Test.java:49)
+         * at section091_exception_usage.Test.main(Test.java:25)
          */
         public Ex2(final String message,
                    final Throwable cause) {
@@ -77,13 +77,13 @@ public class ConfigureExceptionCharacteristics {
         }
 
         /**
-         * section091_exeption_usage.Ex2: java.lang.Exception: cause
-         * at section091_exeption_usage.Test.method2(Test.java:34)
-         * at section091_exeption_usage.Test.method1(Test.java:30)
-         * at section091_exeption_usage.Test.main(Test.java:26)
+         * section091_exception_usage.Ex2: java.lang.Exception: cause
+         * at section091_exception_usage.Test.method2(Test.java:34)
+         * at section091_exception_usage.Test.method1(Test.java:30)
+         * at section091_exception_usage.Test.main(Test.java:26)
          * Caused by: java.lang.Exception: cause
-         * at section091_exeption_usage.Test.createCause(Test.java:49)
-         * at section091_exeption_usage.Test.main(Test.java:25)
+         * at section091_exception_usage.Test.createCause(Test.java:49)
+         * at section091_exception_usage.Test.main(Test.java:25)
          */
         public Ex2(final Throwable cause) {
             super(cause);
@@ -97,7 +97,7 @@ public class ConfigureExceptionCharacteristics {
     public static final class Ex3 extends RuntimeException {
 
         /**
-         * section091_exeption_usage.Ex3: Error message
+         * section091_exception_usage.Ex3: Error message
          */
         public Ex3(final String message) {
             super(message, null, true, false);

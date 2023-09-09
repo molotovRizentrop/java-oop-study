@@ -15,16 +15,16 @@
  * under the License.
  */
 
-package section091_exeption_usage;
+package section091_exception_usage;
 
 /**
- * section081_exceptions.MyException: error message
- * at section091_exeption_usage.MyExceptionClassCharacteristics.method2(MyExceptionClassCharacteristics.java:57)
- * at section091_exeption_usage.MyExceptionClassCharacteristics.method1(MyExceptionClassCharacteristics.java:53)
- * at section091_exeption_usage.MyExceptionClassCharacteristics.main(MyExceptionClassCharacteristics.java:40)
+ * section091_exception_usage.MyException: error message
+ * at section091_exception_usage.MyExceptionClassCharacteristics.method2(MyExceptionClassCharacteristics.java:57)
+ * at section091_exception_usage.MyExceptionClassCharacteristics.method1(MyExceptionClassCharacteristics.java:53)
+ * at section091_exception_usage.MyExceptionClassCharacteristics.main(MyExceptionClassCharacteristics.java:40)
  * Caused by: java.lang.Exception: cause
- * at section091_exeption_usage.MyExceptionClassCharacteristics.createCause(MyExceptionClassCharacteristics.java:49)
- * at section091_exeption_usage.MyExceptionClassCharacteristics.main(MyExceptionClassCharacteristics.java:25)
+ * at section091_exception_usage.MyExceptionClassCharacteristics.createCause(MyExceptionClassCharacteristics.java:49)
+ * at section091_exception_usage.MyExceptionClassCharacteristics.main(MyExceptionClassCharacteristics.java:25)
  * Suppressed: ...
  *
  * @author:kashtan

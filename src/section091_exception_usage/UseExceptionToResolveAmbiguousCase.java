@@ -15,13 +15,13 @@
  * under the License.
  */
 
-package section091_exeption_usage;
+package section091_exception_usage;
 
 /**
  * @author:kashtan
  * @email:bassanddub.co@gmail.com
  **/
-public class UseExeptionToResolveAmbiguousCase {
+public class UseExceptionToResolveAmbiguousCase {
     public static void main(final String[] args) {
         final Mode mode = Mode.valueOf(args[0]);
 

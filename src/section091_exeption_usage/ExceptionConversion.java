@@ -61,10 +61,6 @@ public class ExceptionConversion {
             super(message);
         }
 
-        public CantReadConfigValueException() {
-            super();
-        }
-
         public CantReadConfigValueException(final Exception exception) {
             super(exception);
         }

@@ -58,7 +58,7 @@ public class ExceptionConversion {
             }
         }
         if(!success){
-            throw aggregationException;
+            throw (CantReadConfigValueException)aggregationException.fillInStackTrace();
         }
         System.out.println(configValue);
     }

@@ -44,7 +44,7 @@ public class ExceptionConversion {
                 configValue = provider.getConfigValue();
                 break;
             } catch (final CantReadConfigValueException exception) {
-                System.err.println("Can't read config value from provider: " + provider.getClass() + ": " + exception);
+                exception.printStackTrace();
             }
         }
         System.out.println(configValue);

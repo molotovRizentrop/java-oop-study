@@ -24,6 +24,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Arrays;
 
 import static java.sql.DriverManager.getConnection;
 
@@ -39,13 +40,25 @@ public class ExceptionConversion {
                 new RelationDatabaseConfigProvider()
         };
         int configValue = 666;
+
+        boolean success = false;
+        CantReadConfigValueException aggregationException = null;
         for (final ConfigProvider provider : providers) {
             try {
                 configValue = provider.getConfigValue();
+                success = true;
                 break;
             } catch (final CantReadConfigValueException exception) {
-                exception.printStackTrace();
+                if (aggregationException == null) {
+                    aggregationException = new CantReadConfigValueException(
+                            "Can't read config value using the following providers: " + Arrays.toString(providers)
+                    );
+                }
+                aggregationException.addSuppressed(exception);
             }
+        }
+        if(!success){
+            throw aggregationException;
         }
         System.out.println(configValue);
     }
